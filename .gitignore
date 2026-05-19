@@ -1,0 +1,9 @@
+
+
+
+*.mp3
+__pycache__
+bin
+lib
+pyvenv.cfg
+notes.txt

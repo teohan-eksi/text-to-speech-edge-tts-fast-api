@@ -23,30 +23,43 @@ Make sure you have Python 3.10 or higher installed.
 
 ### Installation
 
-1. Clone the repository:
-   Bash
-   
+1. Clone the repository: <br>
+   **Bash** <br>
+
+   ```
    git clone https://github.com/teohan-eksi/text-to-speech-edge-tts-fast-api.git
+   ```
+   ```
    cd text-to-speech-edge-tts-fast-api
+   ```
+   
+3. Create and activate a virtual environment: <br>
+   **Bash** <br>
 
-2. Create and activate a virtual environment:
-    Bash
-    
-    python3 -m venv .
-    source ./bin/activate
-    python -V # to see the current Python version
+   ```
+   python3 -m venv .
+   ```
+   ```
+   source ./bin/activate
+   ```
+   ```
+   python -V # to see the current Python version
+   ```
 
-3. Install the dependencies
-    Bash
+4. Install the dependencies <br>
+   **Bash** <br>
 
-    pip install -r requirements.txt
+   ```
+   pip install -r requirements.txt
+   ```
 
 ### Running the Application
-
-Start the local development server using:
-    Bash
-
-    fastapi dev
+Start the local development server using: <br>
+   **Bash** <br>
+   
+   ```
+   fastapi dev
+   ```
 
 The server will start spinning at http://127.0.0.1:8000.
 
@@ -56,20 +69,23 @@ Once the server is running, you can view the interactive API documentation at:
 * Swagger UI: http://127.0.0.1:8000/docs
 * ReDoc: http://127.0.0.1:8000/redoc
 
-### Endpoint: Convert Text to Audio
+### Endpoint:
 * Method: POST
 * URL: /audio-files
 * Content-Type: application/json
 
 ### Request Body Example
 
-JSON
+**JSON** <br>
+
+```
 {
     "text": "Hello world! This is a text to speech conversion test.",
     "voice": "en-US-BrianNeural",
     "audio_file_name": "output",
     "audio_file_type": "mp3"
 }
+```
 
 ### Response
 Returns a string response as in the form of "'audio_file_name' was created."

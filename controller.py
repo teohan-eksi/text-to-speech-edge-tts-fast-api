@@ -1,13 +1,7 @@
 from .main import app
+from .edge_tts_wrapper import convert_text_to_audio_file
+from .models import AudioFilesRequest
 
-@app.get("/hw")
-def getHW(): 
-    return "Hello World"
-
-"""import asyncio, edge_tts
-
-async def main():
-    tts = edge_tts.Communicate("Hello, this is my text.", voice="en-US-JennyNeural")
-    await tts.save("output.mp3")
-
-asyncio.run(main())"""
+@app.post("/audio-files")
+async def call_convert_text_to_audio_file(audioFilesRequest: AudioFilesRequest): 
+    return await convert_text_to_audio_file(audioFilesRequest)

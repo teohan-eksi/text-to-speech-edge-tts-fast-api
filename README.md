@@ -5,7 +5,7 @@
 
 A clean and lightweight Python app built with FastAPI that accepts text, voice and file parameters and converts the text into an audio file with a given name and the voice.
 
-* **YouTube Video Link:** youtube.com/watch?v=fbaR4g1iKYA
+* **YouTube Video Link:** https://youtu.be/fbaR4g1iKYA?si=WIsKVc4CsoUF7CA6
 
 ## Features
 * **Text-to-Speech Conversion:** Converts raw text string into high-quality audio file.
